@@ -73,6 +73,5 @@ export default function DesertItems() {
             </div>
 
         </div>
-
     )
 }
