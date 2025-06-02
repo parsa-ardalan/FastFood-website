@@ -14,7 +14,7 @@ export default function DesertItems() {
             id: 1,
             prductName: "fruit jelly",
             ProductImage: jelly,
-            price: 75000,
+            price: 3,
             type: "desert"
         },
 
@@ -22,7 +22,7 @@ export default function DesertItems() {
             id: 2,
             prductName: "mouchi",
             ProductImage: mouchi,
-            price: 75000,
+            price: 5,
             type: "desert"
         },
 
@@ -30,7 +30,7 @@ export default function DesertItems() {
             id: 3,
             prductName: "apple pie",
             ProductImage: applePie,
-            price: 75000,
+            price: 7.5,
             type: "desert"
         },
 
@@ -38,7 +38,7 @@ export default function DesertItems() {
             id: 4,
             prductName: "stroopwafel",
             ProductImage: stroopwafel,
-            price: 75000,
+            price: 4,
             type: "desert"
         },
 
@@ -46,14 +46,14 @@ export default function DesertItems() {
             id: 5,
             prductName: "Italian wafel",
             ProductImage: wafel,
-            price: 83000,
+            price: 5,
             type: "desert"
         },
         {
             id: 6,
             prductName: "ice cream",
             ProductImage: glato,
-            price: 83000,
+            price: 9.5,
             type: "desert"
         },
     ]
@@ -62,7 +62,7 @@ export default function DesertItems() {
 
         <div className="h-screen w-screen flex items-center justify-center">
 
-            <div className="h-4/5 w-5/6 border border-white mx-auto overflow-y-hidden grid grid-cols-6 py-24 px-8 gap-8 md:gap-12 md:px-44 md:py-22">
+            <div className="h-4/5 w-5/6 border border-white mx-auto overflow-y-hidden grid grid-cols-6 py-24 px-8 gap-8 md:gap-12 md:px-56 md:py-22">
 
                 {desertData.map((item) => (
 
@@ -73,8 +73,6 @@ export default function DesertItems() {
             </div>
 
         </div>
-
-
 
     )
 }
