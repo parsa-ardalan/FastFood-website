@@ -1,77 +1,57 @@
+import Item from "./Item"
+
+import falafel from "../../../../images/others-images/falafel.webp"
+import chickenLiver from "../../../../images/others-images/chicken-liver.jpeg"
+import sheepLiver from "../../../../images/others-images/sheap-liver.jpg"
+import turkishKabab from "../../../../images/others-images/turkey-kabab.jpg"
+
 export default function OtherItems() {
 
-    const saladData = [
+    const sandwichData = [
+
         {
             id: 1,
-            prductName: "سالاد یونانی",
-            ProductImage: "../../../../images/salad-images/greek-salad.jpg",
-            prise: 75000,
-            type: "salad"
+            prductName: "falafel",
+            ProductImage: falafel,
+            prise: 4,
+            type: "sandwich"
         },
 
         {
             id: 2,
-            prductName: "سالاد اندونزی",
-            ProductImage: "../../../../images/salad-images/Indonasian-salad.jpg.webp",
-            prise: 75000,
-            type: "salad"
+            prductName: "chicken liver",
+            ProductImage: chickenLiver,
+            prise: 7,
+            type: "sandwich"
         },
 
         {
             id: 3,
-            prductName: "سالاد الویه",
-            ProductImage: "../../../../images/salad-images/olovieh-salad.jpg",
-            prise: 75000,
-            type: "salad"
+            prductName: "sheep liver",
+            ProductImage: sheepLiver,
+            prise: 9.25,
+            type: "sandwich"
         },
 
         {
             id: 4,
-            prductName: "سالاد فصل",
-            ProductImage: "../../../../images/salad-images/salad-fasl.jpg",
-            prise: 75000,
-            type: "salad"
-        },
-
-        {
-            id: 5,
-            prductName: "سالاد ماکارونی",
-            ProductImage: "../../../../images/salad-images/salad-makaroni-min.webp",
-            prise: 83000,
-            type: "salad"
+            prductName: "kabab turky",
+            ProductImage: turkishKabab,
+            prise: 6.5,
+            type: "sandwich"
         }
     ]
 
     return (
 
-        <div className="container mx-auto grid grid-cols-12 w-5/6 mt-12 scroll gap-y-4">
 
-            {saladData.map((item) => (
+        <div className="container mx-auto grid grid-cols-12 w-5/6 md:w-3/4 mt-20 scrol gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20 px-5 py-8">
 
-                <div className="border-white border-2 border-solid h-48 col-span-12 backdrop-blur-lg rounded-lg grid grid-cols-12 hover:backdrop-blur-none mock-container">
+            {sandwichData.map((item) => (
 
-                    <div className="col-span-3 h-full border-r border-r-white border-r-solid">
-
-                        <img src={item?.ProductImage} className="w-full h-full" />
-
-                    </div>
-
-                    <div className="col-span-6 h-full grid grid-cols-10">
-
-                        <h1 className="text-white text-4xl col-span-10 mt-6 ml-4"> {item?.prductName} </h1>
-
-                        <button className="col-span-5 mt-3 bg-orange-400 ml-4 rounded-md h-12"> </button>
-
-                    </div>
-
-                    <div className="col-span-3 h-full">
-
-                    </div>
-
-                </div>
-
+                <Item key={item?.id} name={item?.prductName} price={item?.prise} image={item?.ProductImage} />
             ))}
-
+            
         </div>
 
     )
