@@ -1,42 +1,50 @@
+import Item from "./Item"
+
+import greekSalad from "../../../../images/salad-images/greek-salad.jpg"
+import Indonasian from "../../../../images/salad-images/Indonasian-salad.jpg.webp"
+import olovie from "../../../../images/salad-images/olovieh-salad.jpg"
+import saladFasl from "../../../../images/salad-images/salad-fasl.jpg"
+import makaroniSalad from "../../../../images/salad-images/salad-makaroni-min.webp"
+
 export default function SaladItems() {
 
     const saladData = [
         {
             id: 1,
-            prductName: "سالاد یونانی",
-            ProductImage: "../../../../images/salad-images/greek-salad.jpg",
+            prductName: "Greek salad",
+            ProductImage: greekSalad,
             prise: 75000,
             type: "salad"
         },
 
         {
             id: 2,
-            prductName: "سالاد اندونزی",
-            ProductImage: "../../../../images/salad-images/Indonasian-salad.jpg.webp",
+            prductName: "Indonasian salad",
+            ProductImage: Indonasian,
             prise: 75000,
             type: "salad"
         },
 
         {
             id: 3,
-            prductName: "سالاد الویه",
-            ProductImage: "../../../../images/salad-images/olovieh-salad.jpg",
+            prductName: "Olovie salad",
+            ProductImage: olovie,
             prise: 75000,
             type: "salad"
         },
 
         {
             id: 4,
-            prductName: "سالاد فصل",
-            ProductImage: "../../../../images/salad-images/salad-fasl.jpg",
+            prductName: "fasl salad",
+            ProductImage: saladFasl,
             prise: 75000,
             type: "salad"
         },
 
         {
             id: 5,
-            prductName: "سالاد ماکارونی",
-            ProductImage: "../../../../images/salad-images/salad-makaroni-min.webp",
+            prductName: "makaroni salad",
+            ProductImage: makaroniSalad,
             prise: 83000,
             type: "salad"
         }
@@ -44,33 +52,17 @@ export default function SaladItems() {
 
     return (
 
-        <div className="container mx-auto grid grid-cols-12 w-5/6 mt-12 scroll gap-y-4">
+        <div className="h-screen w-screen flex items-center justify-center">
 
-            {saladData.map((item) => (
+            <div className="h-4/5 w-5/6 border border-white mx-auto overflow-y-hidden grid grid-cols-6 py-24 px-8 gap-8 md:gap-12 md:px-56 md:py-22">
 
-                <div className="border-white border-2 border-solid h-48 col-span-12 backdrop-blur-lg rounded-lg grid grid-cols-12 hover:backdrop-blur-none mock-container">
+                {saladData.map((item) => (
 
-                    <div className="col-span-3 h-full border-r border-r-white border-r-solid">
+                    <Item key={item?.id} name={item?.prductName} image={item?.ProductImage} price={item?.price} category={item?.type} />
 
-                        <img src={item?.ProductImage} className="w-full h-full" />
+                ))}
 
-                    </div>
-
-                    <div className="col-span-6 h-full grid grid-cols-10">
-
-                        <h1 className="text-white text-4xl col-span-10 mt-6 ml-4"> {item?.prductName} </h1>
-
-                        <button className="col-span-5 mt-3 bg-orange-400 ml-4 rounded-md h-12"> </button>
-
-                    </div>
-
-                    <div className="col-span-3 h-full">
-
-                    </div>
-
-                </div>
-
-            ))}
+            </div>
 
         </div>
 
