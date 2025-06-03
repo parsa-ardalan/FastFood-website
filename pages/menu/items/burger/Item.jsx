@@ -7,7 +7,7 @@ export default function Item(props) {
         <div className="col-span-6 md:col-span-3 border border-white rounded-2xl md:rounded-3xl backdrop-blur-lg backdrop-brightness-50">
 
             <div className="flex items-center fixed justify-center w-full h-20 md:h-26 md:-mt-12">
-                <Image src={props?.image} className="w-32 h-full" />
+                <Image src={props?.image} className="w-32 h-full" alt={props?.name}/>
             </div>
 
 

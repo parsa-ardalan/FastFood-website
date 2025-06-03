@@ -41,7 +41,7 @@ export default function DrinkItems() {
         <div className="container mx-auto grid grid-cols-12 w-5/6 mt-12 scroll gap-x-5 py-32 px-10 border">
 
             {DrinkItems.map((item) => (
-                <Item />
+                <Item key={item?.id}/>
             ))}
 
         </div>

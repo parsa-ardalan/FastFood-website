@@ -10,7 +10,7 @@ export default function Item(props) {
 
             <div className="w-full h-2/3 px-4 py-2 md:p-4">
 
-                <Image src={props?.image} className="h-full w-full rounded-lg" />
+                <Image src={props?.image} className="h-full w-full rounded-lg" alt={props?.name} />
 
             </div>
 
