@@ -1,34 +1,48 @@
+import Item from "./Item"
+
+import fishAndChips from "../../../../images/fish-images/fish-and-chips.jpg"
+import grilledFish from "../../../../images/fish-images/kabab-fish.jpg"
+import naggetFish from "../../../../images/fish-images/naget-fish.png"
+import fishSteak from "../../../../images/fish-images/steik-mahi.jpg"    
+
 export default function FishItems() {
 
     const fishData = [
         {
             id: 1,
-            prductName: "فیش اند چسپس",
-            ProductImage: "../../../../images/fish-images/fish-and-chips.jpg",
+            prductName: "fish and chips",
+            ProductImage: fishAndChips,
             prise: 75000,
             type: "fish"
         },
 
         {
             id: 2,
-            prductName: "ماهی کبابی",
-            ProductImage: "../../../../images/fish-images/kabab-fish.jpg",
+            prductName: "grilled fish",
+            ProductImage: grilledFish,
             prise: 75000,
             type: "fish"
         },
 
         {
             id: 3,
-            prductName: "ناگت ماهی",
-            ProductImage: "../../../../images/fish-images/naget-fish.png",
+            prductName: "nagget fish",
+            ProductImage: naggetFish,
             prise: 75000,
             type: "fish"
         },
 
         {
             id: 4,
-            prductName: "استیک ماهی",
-            ProductImage: "../../../../images/fish-images/steik-mahi.jpg",
+            prductName: "fish steak",
+            ProductImage: fishSteak,
+            prise: 75000,
+            type: "fish"
+        },
+        {
+            id: 5,
+            prductName: "grilled fish",
+            ProductImage: grilledFish,
             prise: 75000,
             type: "fish"
         },
@@ -36,35 +50,19 @@ export default function FishItems() {
 
     return (
 
-        <div className="container mx-auto grid grid-cols-12 w-5/6 mt-12 scroll gap-y-4">
+        <div className="w-screen h-screen px-5 py-10 md:px-32 md:py-40">
+      
+                  <div className="grid grid-cols-10 w-full h-auto md:gap-x-5 gap-y-6 px-10">
+      
+                      {
+                          fishData.map((item) => (
+      
+                              <Item key={item?.id} name={item?.prductName} image={item?.ProductImage} price={item?.prise} category={item?.type} />
+                          ))
+                      }
+      
+                  </div>
 
-            {fishData.map((item) => (
-
-                <div className="border-white border-2 border-solid h-48 col-span-12 backdrop-blur-lg rounded-lg grid grid-cols-12 hover:backdrop-blur-none mock-container">
-
-                    <div className="col-span-3 h-full border-r border-r-white border-r-solid">
-
-                        <img src={item?.ProductImage} className="w-full h-full" />
-
-                    </div>
-
-                    <div className="col-span-6 h-full grid grid-cols-10">
-
-                        <h1 className="text-white text-4xl col-span-10 mt-6 ml-4"> {item?.prductName} </h1>
-
-                        <button className="col-span-5 mt-3 bg-orange-400 ml-4 font-bold rounded-md h-12"> add to cart </button>
-
-                    </div>
-
-                    <div className="col-span-3 h-full">
-
-                    </div>
-
-                </div>
-
-            ))}
-
-        </div>
-
+              </div>
     )
 }
