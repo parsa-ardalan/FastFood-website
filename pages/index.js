@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import Link from "next/link";
 import Header from "./components/header/Header";
 
@@ -7,31 +7,36 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export default function Home() {
-
   return (
-
-    <div  >
-
+    <div className={`${geistSans.variable} font-sans min-h-screen text-white`}>
       <Header />
 
-      <h1 className="text-2xl mt-28 ml-6 text-white font-bold md:text-4xl md:ml-44 md:mt-36"> happy meal, happy deal! </h1>
+      <main className="container mx-auto px-6 md:px-44 pt-28 md:pt-36">
+        <h1 className="text-2xl md:text-4xl font-bold">happy meal, happy deal!</h1>
 
-      <p className="mt-5 ml-8 text-white text-sm md:ml-44 md:text-2xl md:mt-10"> click on <span className="font-bold text-amber-400"> order </span> button
-        right now and get a meal. <br /> look at our new bargains :)
-      </p>
+        <p className="mt-5 md:mt-10 text-sm md:text-2xl">
+          click on <span className="font-bold text-amber-400">order</span> button right now and get a meal.
+          <br />
+          look at our new bargains :)
+        </p>
 
-      <div className="flex flex-row w-full h-12 mt-7 md:mt-10 gap-x-4">
+        <div className="flex gap-4 mt-7 md:mt-10">
+          <Link
+            href="./order/Order"
+            className="w-20 h-6 sm:w-28 sm:h-8 md:w-36 md:h-10 flex items-center justify-center border border-amber-400 rounded-md text-amber-400 text-xs sm:text-sm md:text-xl hover:-mt-2 duration-500"
+          >
+            order
+          </Link>
 
-        <button className="w-14 ml-10 border border-amber-400 text-amber-400 h-7 text-xs rounded-sm md:rounded-md md:ml-44 md:text-xl md:w-36 md:h-10" id="order"> <Link href={"./order/Order"}>  order  </Link> </button>
-        <button className="w-14 md:w-36 border h-7 text-xs border-amber-400 rounded-sm md:rounded-md text-amber-400 md:text-xl md:h-10" id="menue"><Link href={"./menu/main/MainMenu"}>  menu  </Link> </button>
-
-      </div>
+          <Link
+            href="./menu/main/MainMenu"
+            className="w-20 h-6 sm:w-28 sm:h-8 md:w-36 md:h-10 flex items-center justify-center border border-amber-400 rounded-md text-amber-400 text-xs sm:text-sm md:text-xl hover:-mt-2 duration-500"
+          >
+            menu
+          </Link>
+        </div>
+      </main>
     </div>
   );
 }
