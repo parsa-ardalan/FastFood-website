@@ -1,19 +1,27 @@
 import Item from "./Item"
 
+import shampine from "../../../../images/drink-images/shampine.png"
+import whisky from "../../../../images/drink-images/whisky.png"
+import beer from "../../../../images/drink-images/beer.png"
+import pepsi from "../../../../images/drink-images/pepsi.png"
+import zerocola from "../../../../images/drink-images/zero-cola.png"
+import fanta from "../../../../images/drink-images/fanta.png"
+
 export default function DrinkItems() {
 
     const DrinkItems = [{
+
         id: 1,
-        prductName: "نوشابه کوکاکولا",
-        ProductImage: "../../../../images/drink-images/coca-cola.JPG",
+        prductName: "shampine",
+        ProductImage: shampine,
         prise: 75000,
         type: "drinks"
     },
 
     {
         id: 2,
-        prductName: "نوشابه فانتا",
-        ProductImage: "../../../../images/drink-images/fanta.JPG",
+        prductName: "whisky",
+        ProductImage: whisky,
         prise: 75000,
         type: "drinks"
     },
@@ -21,16 +29,30 @@ export default function DrinkItems() {
 
     {
         id: 3,
-        prductName: "نوشابه پپسی",
-        ProductImage: "../../../../images/drink-images/pepsi.JPG",
+        prductName: "beer",
+        ProductImage: beer,
         prise: 75000,
         type: "drinks"
     },
 
     {
         id: 4,
-        prductName: "نوشابه زیروکولا",
-        ProductImage: "../../../../images/drink-images/zero-cola.JPG",
+        prductName: "zero cola",
+        ProductImage: zerocola,
+        prise: 83000,
+        type: "drinks"
+    },
+    {
+        id: 5,
+        prductName: "pepsi",
+        ProductImage: pepsi,
+        prise: 83000,
+        type: "drinks"
+    },
+    {
+        id: 6,
+        prductName: "fanta",
+        ProductImage: fanta,
         prise: 83000,
         type: "drinks"
     },
@@ -38,11 +60,17 @@ export default function DrinkItems() {
 
     return (
 
-        <div className="container mx-auto grid grid-cols-12 w-5/6 mt-12 scroll gap-x-5 py-32 px-10 border">
+        <div className="w-screen h-screen flex justify-center items-center">
 
-            {DrinkItems.map((item) => (
-                <Item key={item?.id}/>
-            ))}
+            <div className="grid grid-cols-12 h-3/4 w-10/12 py-6 px-3 gap-y-5 gap-x-3 md:py-36 md:gap-x-6">
+
+                {DrinkItems.map((item) => (
+
+                    <Item key={item?.id} name={item?.prductName} price={item?.prise} image={item?.ProductImage} />
+
+                ))}
+
+            </div>
 
         </div>
 
