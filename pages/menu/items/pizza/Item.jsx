@@ -9,8 +9,13 @@ export default function Item(props) {
 
             <div className="col-span-2 py-2.5 px-2.5 h-full">
 
-                <Image src={props?.image} className="border rounded-xl w-full h-full" alt={props?.name}/>
-
+                <Image
+                    src={props?.image}
+                    alt={props?.name}
+                    width={300}
+                    height={200}
+                    className="border rounded-xl w-full h-full"
+                />
             </div>
 
             <div className="col-span-3">

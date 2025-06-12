@@ -12,7 +12,7 @@ export default function Item(props) {
 
             <div className="col-span-2 p-2 md:col-span-5">
 
-                <Image src={props?.image} className="w-full h-full rounded-md" alt={props?.name}/>
+                <Image src={props?.image} className="w-full h-full rounded-md md:h-full md:w-full" alt={props?.name} width={120} height={120}/>
 
             </div>
 

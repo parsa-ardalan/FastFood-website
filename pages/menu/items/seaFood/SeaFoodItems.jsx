@@ -1,56 +1,7 @@
-
-// images
-
-import kaviar from "../../../../images/seafood-images/kaviar.jpg"
-import lobster from "../../../../images/seafood-images/lobster.jpg"
-import mussels from "../../../../images/seafood-images/mussels.jpg"
-import shrimp from "../../../../images/seafood-images/shrimp.jpg"
-import sushi from "../../../../images/seafood-images/sushi.webp"
 import Item from "./Item"
+import seaFoodData from "../../../../data/menu/SeaFood.json"
 
 export default function SeaFoodItems() {
-
-    const seaFoodData = [
-        {
-            id: 1,
-            prductName: "kaviar",
-            ProductImage: kaviar,
-            prise: 75000,
-            type: "seaFood"
-        },
-
-        {
-            id: 2,
-            prductName: "lobster",
-            ProductImage: lobster,
-            prise: 75000,
-            type: "seaFood"
-        },
-
-        {
-            id: 3,
-            prductName: "mussels",
-            ProductImage: mussels,
-            prise: 75000,
-            type: "seaFood"
-        },
-
-        {
-            id: 4,
-            prductName: "shrimp",
-            ProductImage: shrimp,
-            prise: 75000,
-            type: "seaFood"
-        },
-
-        {
-            id: 5,
-            prductName: "sushi",
-            ProductImage: sushi,
-            prise: 83000,
-            type: "seaFood"
-        }
-    ]
 
     return (
 
@@ -61,7 +12,7 @@ export default function SeaFoodItems() {
                 {
                     seaFoodData.map((item) => (
 
-                        <Item key={item?.id} name={item?.prductName} image={item?.ProductImage} price={item?.prise} category={item?.type} />
+                        <Item key={item?.id} name={item?.prductName} image={item?.ProductImage} price={item?.price} category={item?.type} />
                     ))
                 }
 

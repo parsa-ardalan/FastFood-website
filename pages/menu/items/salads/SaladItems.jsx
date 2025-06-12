@@ -1,54 +1,7 @@
 import Item from "./Item"
-
-import greekSalad from "../../../../images/salad-images/greek-salad.jpg"
-import Indonasian from "../../../../images/salad-images/Indonasian-salad.jpg.webp"
-import olovie from "../../../../images/salad-images/olovieh-salad.jpg"
-import saladFasl from "../../../../images/salad-images/salad-fasl.jpg"
-import makaroniSalad from "../../../../images/salad-images/salad-makaroni-min.webp"
+import saladData from "../../../../data/menu/Salad.json"
 
 export default function SaladItems() {
-
-    const saladData = [
-        {
-            id: 1,
-            prductName: "Greek salad",
-            ProductImage: greekSalad,
-            prise: 75000,
-            type: "salad"
-        },
-
-        {
-            id: 2,
-            prductName: "Indonasian salad",
-            ProductImage: Indonasian,
-            prise: 75000,
-            type: "salad"
-        },
-
-        {
-            id: 3,
-            prductName: "Olovie salad",
-            ProductImage: olovie,
-            prise: 75000,
-            type: "salad"
-        },
-
-        {
-            id: 4,
-            prductName: "fasl salad",
-            ProductImage: saladFasl,
-            prise: 75000,
-            type: "salad"
-        },
-
-        {
-            id: 5,
-            prductName: "makaroni salad",
-            ProductImage: makaroniSalad,
-            prise: 83000,
-            type: "salad"
-        }
-    ]
 
     return (
 

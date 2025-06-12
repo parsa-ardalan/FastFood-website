@@ -1,15 +1,13 @@
 import Item from "./Item";
 
-import pizza from "../../../images/icons/pizza.png"
-import burger from "../../../images/icons/burger.png"
-import seaFood from "../../../images/icons/seaFood.png"
-import dessert from "../../../images/icons/dessert.png"
-import fish from "../../../images/icons/fish.png"
-import others from "../../../images/icons/others.png"
-import drinks from "../../../images/icons/drinks.png"
-import salad from "../../../images/icons/salad.png"
-
-
+import pizza from "../../../public/images/icons/pizza.png"
+import burger from "../../../public/images/icons/burger.png"
+import seaFood from "../../../public/images/icons/seaFood.png"
+import dessert from "../../../public/images/icons/dessert.png"
+import fish from "../../../public/images/icons/fish.png"
+import others from "../../../public/images/icons/others.png"
+import drinks from "../../../public/images/icons/drinks.png"
+import salad from "../../../public/images/icons/salad.png"
 
 
 export default function MenuPage() {
@@ -25,7 +23,7 @@ export default function MenuPage() {
         {
             id: 2,
             name: "burger",
-            menuAddress: "../items/sandwich/BurgerItems",
+            menuAddress: "../items/burger/BurgerItems",
             imageAddress: burger
         },
         {
@@ -74,7 +72,7 @@ export default function MenuPage() {
 
                 items.map((item) => (
 
-                    <Item key={item?.id} name={item?.name} link={item?.menuAddress} image={item?.imageAddress} />
+                    <Item key={item?.id} name={item?.name} link={item?.menuAddress} image={item?.imageAddress} alt={item?.name} />
                 ))
             }
 
