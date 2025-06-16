@@ -9,5 +9,6 @@ export default function Items() {
         <div className="h-screen w-screen flex items-center justify-center">
             <MenuPage />
         </div>
+        
     )
 }
