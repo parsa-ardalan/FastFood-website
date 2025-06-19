@@ -20,26 +20,42 @@ export default function Item(props) {
 
             </div>
 
-            {/* name and icon  */}
+            {/* name , icon and price  */}
 
             <div className="h-1/3 items-center justify-center">
 
                 <h1 className="w-full text-center text-white text-xs md:text-lg"> {props?.name} </h1>
 
-                <div className="w-full" dir="rtl">
 
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 24 24"
-                        strokeWidth={1.5} stroke="currentColor"
-                        className="size-5 mt-5 mr-3 mb-3 text-white hover:text-amber-400 duration-150 md:size-7 md:mr-4 md:mb-4">
+                {/* price and icon */}
 
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <div className="grid grid-cols-2 w-full mt-3 md:px-3">
 
-                    </svg>
+
+                    {/* price */}
+
+                    <div className="col-span-1 flex items-center px-3 py-2">
+                        <h1 className="text-white text-xs md:text-lg"> {props?.price} $ </h1>
+                    </div>
+
+
+                    {/* icon add to cart */}
+
+                    <div className="col-span-1 flex items-center px-3 py-2" dir="rtl">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24"
+                            strokeWidth={1.5} stroke="currentColor"
+                            className="size-5 text-white hover:text-amber-400 duration-150 md:size-7">
+
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+
+                        </svg>
+
+                    </div>
 
                 </div>
             </div>
-
         </div>
     )
 }
