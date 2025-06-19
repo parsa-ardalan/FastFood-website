@@ -15,8 +15,8 @@
     },
     {
         "id": 3,
-        "prductName": "kabab fish",
-        "ProductImage": "/images/fish-images/kabab-fish.jpg",
+        "prductName": "steak fish",
+        "ProductImage": "/images/fish-images/steak-mahi.jpg",
         "price": 6.3,
         "type": "fish"
     },
