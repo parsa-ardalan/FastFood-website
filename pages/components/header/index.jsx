@@ -1,6 +1,7 @@
 import Item from "./Item"
 
 export default function Header() {
+
   const HeadOptions = [
     { name: "order", link: "/order/Order" },
     { name: "menu", link: "/menu/main/MainMenu" },
@@ -8,7 +9,7 @@ export default function Header() {
     { name: "about us", link: "/about/About" },
     { name: "contact us", link: "/contact/Contact" }
   ];
-
+  
   return (
 
     <header className="grid grid-cols-5 text-center h-20 mx-auto w-11/12" dir="ltr">
