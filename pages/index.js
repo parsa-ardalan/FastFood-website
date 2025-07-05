@@ -13,7 +13,7 @@ export default function Home() {
 
     <div className={`${geistSans.variable} font-sans min-h-screen text-white`}>
 
-    <Header/>
+      <Header />
 
       <main className="container mx-auto px-6 md:px-44 pt-28 md:pt-36">
 
