@@ -1,4 +1,4 @@
-import Headeroptions from "./HeaderOptions";
+import Item from "./Item"
 
 export default function Header() {
   const HeadOptions = [
@@ -10,7 +10,9 @@ export default function Header() {
   ];
 
   return (
+
     <header className="grid grid-cols-5 text-center h-20 mx-auto w-11/12" dir="ltr">
+
       <svg xmlns="http://www.w3.org/2000/svg"
         fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
         stroke="currentColor"
@@ -19,8 +21,9 @@ export default function Header() {
       </svg>
 
       {HeadOptions.map((item) => (
-        <Headeroptions key={item.link} innerHTML={item.name} link={item.link} />
+        <Item key={item.link} innerHTML={item.name} link={item.link} />
       ))}
     </header>
+
   );
 }
