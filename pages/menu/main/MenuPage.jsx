@@ -1,5 +1,7 @@
 import Item from "./Item";
 
+// importig icons 
+
 import pizza from "../../../public/images/icons/pizza.png"
 import burger from "../../../public/images/icons/burger.png"
 import seaFood from "../../../public/images/icons/seaFood.png"
@@ -17,49 +19,49 @@ export default function MenuPage() {
         {
             id: 1,
             name: "pizza",
-            menuAddress: "../items/pizza/PizzaItems",
+            menuAddress: "/menu/items/pizza",
             imageAddress: pizza
         },
         {
             id: 2,
             name: "burger",
-            menuAddress: "../items/burger/BurgerItems",
+            menuAddress: "/menu/items/burger",
             imageAddress: burger
         },
         {
             id: 3,
             name: "seaFood",
-            menuAddress: "../items/seaFood/SeaFoodItems",
+            menuAddress: "/menu/items/seaFood",
             imageAddress: seaFood
         },
         {
             id: 4,
             name: "dessert",
-            menuAddress: "../items/deserts/DesertItems",
+            menuAddress: "/menu/items/deserts",
             imageAddress: dessert
         },
         {
             id: 5,
             name: "fish",
-            menuAddress: "../items/fish/FishItems",
+            menuAddress: "/menu/items/fish",
             imageAddress: fish
         },
         {
             id: 6,
             name: "others",
-            menuAddress: "../items/others/OtherItems",
+            menuAddress: "/menu/items/others",
             imageAddress: others
         },
         {
             id: 7,
             name: "drinks",
-            menuAddress: "../items/drinks/DrinkItems",
+            menuAddress: "/menu/items/drinks",
             imageAddress: drinks
         },
         {
             id: 8,
             name: "salad",
-            menuAddress: "../items/salads/SaladItems",
+            menuAddress: "/menu/items/salads",
             imageAddress: salad
         },
     ]
